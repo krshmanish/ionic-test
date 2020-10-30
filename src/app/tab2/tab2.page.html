@@ -24,12 +24,20 @@
 
   <ion-card>
     <ion-grid>
-      <ion-row class='ion-justify-content-center'>
-        <ion-col class='ion-text-center ion-padding ion-align-items-center' size="4" *ngFor='let option of options'>
-          <button ion-button color="primary" class='btn'>
+      <ion-row>
+        <ion-col size="3" *ngFor='let option of options'>
+          <ion-toolbar>
+            <ion-buttons slot="primary" class='ion-justify-content-center w-100 mr-0'>
+              <ion-button color="secondary">
+                <ion-icon slot="icon-only" [name]="option.icon"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+
+          <!-- <button ion-button color="secondary" class='btn'>
             <ion-icon [name]="option.icon" class='btn-icon'></ion-icon>
             <ion-label class='ion-text-capitalize'>{{option.details}}</ion-label>
-          </button>
+          </button> -->
         </ion-col>
       </ion-row>
     </ion-grid>

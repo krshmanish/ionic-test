@@ -36,13 +36,18 @@ export class AppComponent {
         {
           title: "Chat",
           url: "/chat",
-          icon: "share"
+          icon: "chatbox"
         },
         {
           title: "Contacts",
           url: "/contacts",
-          icon: "home"
+          icon: "people"
         },
+        {
+          title: "Register",
+          url: "/tabs/register",
+          icon: "person-add"
+        }
       ]
   }
 }
