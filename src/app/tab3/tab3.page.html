@@ -1,8 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-buttons slot='start'>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Membership</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,6 +13,20 @@
       <ion-title size="large">Tab 3</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" *ngFor="let currentImage of currentImages">
+          <img [src]="currentImage" *ngIf="currentImage">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+    <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+      <ion-fab-button (click)="takePicture()">
+        <ion-icon name="camera"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </ion-content>
+
 </ion-content>

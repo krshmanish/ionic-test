@@ -1,0 +1,28 @@
+ion-slides{
+    ion-slide {
+      width: 100% !important;
+
+      ion-card{
+        height: 100%;
+        width: 100%;
+
+        ion-card-header {
+            img {
+                height: 200px; 
+            }
+        }
+    }
+  }
+}
+
+.btn-icon {
+    font-size: 2rem;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.btn {
+    height: 120px;
+    width: 100%;
+}
