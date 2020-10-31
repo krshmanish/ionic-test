@@ -1,0 +1,14 @@
+:host {
+    .background-image {
+        --background: url('https://picsum.photos/id/1003/1181/1772') 0 0/100% 100% no-repeat;
+    }
+
+    .bg-transparent {
+        background: transparent;
+    }
+
+    .content-center {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}

@@ -1,0 +1,42 @@
+<ion-header class='d-flex p-10'>
+  <ion-title>Login</ion-title>
+  <ion-button fill='clear' (click)='onCloseClick()'>Close</ion-button>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-grid>
+    <ion-row>
+      <ion-list lines="full" class="w-100">
+
+        <ion-title class='logo ion-text-center ion-margin-bottom ion-padding'>
+          HAIR CUT !
+        </ion-title>
+        <ion-item>
+          <ion-label position="floating">Email ID / Mobile No.</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type='Password'></ion-input>
+        </ion-item>
+
+
+        <!-- <ion-item>
+          <ion-label position="floating">Enter Your Address</ion-label>
+          <ion-input placeholder="Address Line 1"></ion-input>
+          <ion-input placeholder="Address Line 2"></ion-input>
+          <ion-input placeholder="City"></ion-input>
+          <ion-input placeholder="State"></ion-input>
+          <ion-input placeholder="Zip Code"></ion-input>
+        </ion-item> -->
+
+      </ion-list>
+      <ion-list lines="full" class="ion-margin w-100 ion-text-center">
+        <ion-button expand="block" color='primary' class='ion-text-uppercase' (click)='onLoginClick()'>Login
+        </ion-button>
+        <ion-button fill='clear' class='ion-margin-top' color='secondary' (click)='onForgotPasswordClick()'>Forgot Password ?</ion-button>
+      </ion-list>
+    </ion-row>
+  </ion-grid>
+</ion-content>

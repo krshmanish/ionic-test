@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { LoginComponent } from './login/login.component';
+import { user } from './register-or-login.constant';
+import { RegisterComponent } from './register/register.component';
 
 @Component({
   selector: 'app-register-or-login',
@@ -7,9 +11,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterOrLoginPage implements OnInit {
 
-  constructor() { }
+  user = user;
+
+  constructor(public modalController: ModalController) { }
 
   ngOnInit() {
   }
 
+  
+  async openModal(type: string) {
+    const modal = await this.modalController.create({
+      component: type === user.LOGIN ? LoginComponent : RegisterComponent,
+      cssClass: 'my-custom-class'
+    });
+    return await modal.present();
+  }
 }
