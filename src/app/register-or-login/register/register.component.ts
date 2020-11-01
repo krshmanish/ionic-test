@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
 
 @Component({
@@ -8,7 +9,16 @@ import { ModalController } from '@ionic/angular';
 })
 export class RegisterComponent implements OnInit {
   
-  constructor(private modalCtrl: ModalController) { }
+  registerForm: FormGroup;
+
+  constructor(private modalCtrl: ModalController, private fb: FormBuilder) {
+    this.registerForm = this.fb.group({
+      name: [],
+      email: [],
+      gender: [],
+      password: []
+    });
+  }
 
   ngOnInit() {}
 
@@ -22,5 +32,9 @@ export class RegisterComponent implements OnInit {
 
   onRegisterClick() {
     
+  }
+
+  submitForm() {
+    console.log(this.registerForm.value);
   }
 }

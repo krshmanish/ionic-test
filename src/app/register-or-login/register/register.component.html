@@ -4,56 +4,58 @@
 </ion-header>
 
 <ion-content fullscreen>
-  <ion-grid>
-    <ion-row>
-      <ion-list lines="full" class="w-100">
+  <form [formGroup]="registerForm">
+    <ion-grid>
+      <ion-row>
+        <ion-list lines="full" class="w-100">
 
-        <ion-title class='logo ion-text-center ion-margin-bottom ion-padding'>
-          HAIR CUT !
-        </ion-title>
-        <ion-item>
-          <ion-label position="floating">Name</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
+          <ion-title class='logo ion-text-center ion-margin-bottom ion-padding'>
+            HAIR CUT !
+          </ion-title>
+          <ion-item>
+            <ion-label position="floating">Name</ion-label>
+            <ion-input formControlName='name' type='text'></ion-input>
+          </ion-item>
 
-        <ion-item>
-          <ion-label position="floating">Email ID / Mobile No.</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
+          <ion-item>
+            <ion-label position="floating">Email ID / Mobile No.</ion-label>
+            <ion-input formControlName='email' type='email'></ion-input>
+          </ion-item>
 
-        <ion-item>
-          <ion-label position="floating">Password</ion-label>
-          <ion-input type='Password'></ion-input>
-        </ion-item>
+          <ion-list>
+            <ion-radio-group value="biff" formControlName='gender'>
+              <ion-list-header>
+                <ion-label>Gender</ion-label>
+              </ion-list-header>
 
-        <ion-list>
-          <ion-radio-group value="biff">
-            <ion-list-header>
-              <ion-label>Gender</ion-label>
-            </ion-list-header>
-        
-            <ion-item>
-              <ion-label>Male</ion-label>
-              <ion-radio slot="start" value="male"></ion-radio>
-            </ion-item>
-        
-            <ion-item>
-              <ion-label>Female</ion-label>
-              <ion-radio slot="start" value="female"></ion-radio>
-            </ion-item>
-        
-            <ion-item>
-              <ion-label>Other</ion-label>
-              <ion-radio slot="start" value="other"></ion-radio>
-            </ion-item>
-          </ion-radio-group>
+              <ion-item>
+                <ion-label>Male</ion-label>
+                <ion-radio slot="start" value="male"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Female</ion-label>
+                <ion-radio slot="start" value="female"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Other</ion-label>
+                <ion-radio slot="start" value="other"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-list>
+
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type='Password' formControlName='password'></ion-input>
+          </ion-item>
+
         </ion-list>
-
-      </ion-list>
-      <ion-list lines="full" class="w-100 ion-text-center">
-        <ion-button expand="block" color='secondary' class='ion-text-uppercase' (click)='onRegisterClick()'>Register
-        </ion-button>
-      </ion-list>
-    </ion-row>
-  </ion-grid>
+        <ion-list lines="full" class="w-100 ion-text-center">
+          <ion-button (click)='submitForm()' expand="block" color='secondary' class='ion-text-uppercase'>Register
+          </ion-button>
+        </ion-list>
+      </ion-row>
+    </ion-grid>
+  </form>
 </ion-content>
